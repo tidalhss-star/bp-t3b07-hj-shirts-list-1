@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <title>합정 셔츠룸 모음 - 정보 & 상세 가이드 | 진짜 vs 가짜</title>
+    <meta name="description" content="합정 셔츠룸 모음, 진짜 정보만 까발린다. 가짜 셔츠룸 거르는 법, 시스템, 가격, 위치 팁. 합정 셔츠룸의 모든 것. 010-6279-0862">
+    <meta name="keywords" content="합정 셔츠룸, 합정 셔츠룸 모음, 합정 셔츠룸 정보, 합정 셔츠룸 가격, 합정 셔츠룸 시스템, 합정 셔츠룸 후기">
+    <link rel="canonical" href="https://t3b07-hj-shirts-list-1.vercel.app/info">
+    <meta property="og:title" content="합정 셔츠룸 모음 - 진짜 정보만 모았다">
+    <meta property="og:description" content="합정 셔츠룸 모음. 가짜 거르고 진짜만. 시스템, 가격, 분위기 끝판왕 정보. 지금 확인.">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0b0d0f;
+            color: #e8e6e3;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            background: #111316;
+            border-bottom: 1px solid #2a2e33;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #f0ede8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .logo span {
+            color: #a67c4e;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #a8a49e;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            letter-spacing: 0.02em;
+        }
+        .nav-links a:hover {
+            color: #e8e6e3;
+        }
+        .nav-cta a {
+            background: #a67c4e;
+            color: #0b0d0f;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.1s;
+            display: inline-block;
+            letter-spacing: 0.03em;
+        }
+        .nav-cta a:hover {
+            background: #c49a6c;
+            transform: scale(1.02);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: #e8e6e3;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-links.active, .nav-cta.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #111316;
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid #2a2e33;
+            }
+            .nav-links.active a {
+                font-size: 1.1rem;
+            }
+            .nav-cta.active a {
+                text-align: center;
+            }
+        }
+        main {
+            padding: 60px 0 80px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: #f0ede8;
+            margin-bottom: 12px;
+        }
+        h1 span {
+            color: #a67c4e;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #a8a49e;
+            max-width: 680px;
+            margin-bottom: 48px;
+            line-height: 1.5;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #f0ede8;
+            margin: 48px 0 24px;
+            border-left: 4px solid #a67c4e;
+            padding-left: 16px;
+        }
+        .section-title span {
+            color: #a67c4e;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .info-card {
+            background: #15181c;
+            border: 1px solid #2a2e33;
+            border-radius: 12px;
+            padding: 28px 24px;
+            transition: border-color 0.2s, transform 0.15s;
+        }
+        .info-card:hover {
+            border-color: #a67c4e;
+            transform: translateY(-2px);
+        }
+        .info-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #f0ede8;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .info-card h3::before {
+            content: "▸";
+            color: #a67c4e;
+            font-size: 1rem;
+        }
+        .info-card p, .info-card li {
+            color: #b0aca4;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-card ul li {
+            padding: 4px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+        .info-card ul li::before {
+            content: "—";
+            color: #a67c4e;
+            position: absolute;
+            left: 0;
+        }
+        .highlight-box {
+            background: #1a1e23;
+            border: 1px solid #a67c4e;
+            border-radius: 12px;
+            padding: 32px 28px;
+            margin: 40px 0;
+            position: relative;
+        }
+        .highlight-box::before {
+            content: "⚠️ 진짜만 말한다";
+            position: absolute;
+            top: -12px;
+            left: 24px;
+            background: #0b0d0f;
+            padding: 0 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #a67c4e;
+            letter-spacing: 0.05em;
+        }
+        .highlight-box p {
+            color: #d4d0c8;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .highlight-box strong {
+            color: #f0ede8;
+        }
+        .faq-list {
+            display: grid;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .faq-item {
+            background: #15181c;
+            border: 1px solid #2a2e33;
+            border-radius: 10px;
+            padding: 20px 24px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .faq-item:hover {
+            border-color: #a67c4e;
+        }
+        .faq-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #f0ede8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item h4::after {
+            content: "+";
+            color: #a67c4e;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        .faq-item p {
+            color: #b0aca4;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 12px;
+            display: none;
+        }
+        .faq-item.open p {
+            display: block;
+        }
+        .faq-item.open h4::after {
+            content: "−";
+        }
+        .tel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #a67c4e;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid #a67c4e;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+            margin-top: 8px;
+        }
+        .tel-link:hover {
+            background: #a67c4e;
+            color: #0b0d0f;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 32px 0;
+        }
+        .stat-block {
+            background: #15181c;
+            border: 1px solid #2a2e33;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+        .stat-block .number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #a67c4e;
+            line-height: 1;
+        }
+        .stat-block .label {
+            color: #a8a49e;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            letter-spacing: 0.03em;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .two-col { grid-template-columns: 1fr; }
+            .nav-links.active, .nav-cta.active {
+                display: flex;
+            }
+        }
+        footer {
+            border-top: 1px solid #2a2e33;
+            padding: 32px 0;
+            text-align: center;
+            color: #6b6b6b;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="/" class="logo">합정<span>셔츠룸</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="/">홈</a>
+                <a href="/info">정보</a>
+                <a href="/list">리스트</a>
+                <a href="/review">후기</a>
+            </div>
+            <div class="nav-cta" id="navCta">
+                <a href="tel:010-6279-0862">010-6279-0862</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>합정 셔츠룸 <span>정보</span></h1>
+            <p class="subhead">가짜 정보에 속지 마라. 합정 셔츠룸의 진짜 시스템, 가격, 분위기, 거르는 법. 직접 부딪히고 검증한 내용만 까발린다.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>합정 셔츠룸 시스템</h3>
+                    <p>기본 1시간 30분~2시간. 초이스, 2차 시스템, VIP 룸까지. 업소마다 룰이 다르니까 미리 확인해라. 대부분 20대 초중반 라인업, 일부는 30대 초반도 섞임. 시스템 빡센 곳이 분위기 좋은 법이다.</p>
+                </div>
+                <div class="info-card">
+                    <h3>가격 & 비용</h3>
+                    <ul>
+                        <li>기본 입장: 15~25만 원 (시간대, 요일 변동)</li>
+                        <li>초이스 추가: 10~20만 원</li>
+                        <li>VIP/2차: 30~50만 원</li>
+                        <li>※ 가짜 업소는 입장비 싸게 유인 후 추가 비용 폭탄</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>가짜 셔츠룸 거르는 법</h3>
+                    <ul>
+                        <li>사진이 너무 예쁘면 100% 가짜</li>
+                        <li>후기가 없거나 별점만 있으면 의심</li>
+                        <li>입장 전 가격표 요구했을 때 회피하면 나와라</li>
+                        <li>합정 역에서 도보 10분 이상이면 위치 사기일 확률 높음</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>합정 vs 다른 지역</h3>
+                    <p>합정은 홍대/상수보다 아직 덜 상업화돼서 시스템이 더 자유로운 편. 마인드 좋은 곳이 많다. 다만 검증 안 된 신규 업소 조심. 강남 대비 70% 가격으로 비슷한 퀄리티 가능.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>진짜 팁:</strong> 합정 셔츠룸은 '마인드'가 전부다. 시스템 좋아도 마인드 구리면 돈 아깝다. 미리 전화해서 분위기 물어보고, 말투 거친 곳은 걸러라. <strong>010-6279-0862</strong>로 직접 확인하는 게 가장 확실하다.</p>
+                <a href="tel:010-6279-0862" class="tel-link">📞 전화로 확인하기</a>
+            </div>
+
+            <h2 class="section-title">합정 셔츠룸 <span>핵심 체크리스트</span></h2>
+            <div class="two-col">
+                <div class="stat-block">
+                    <div class="number">5</div>
+                    <div class="label">검증된 합정 셔츠룸</div>
+                </div>
+                <div class="stat-block">
+                    <div class="number">90%</div>
+                    <div class="label">가짜 업소 거르는 성공률</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">자주 묻는 <span>질문</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>합정 셔츠룸 처음 가는데 뭐 준비해야 하나요?</h4>
+                    <p>신분증 필수. 현금 위주로 준비해라 (카드 되는 곳도 있지만 현금이 안전). 예약은 30분 전에 전화로 하고, 위치 정확히 확인해라. 합정 역 4번 출구 근처가 대부분.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>가짜 업소는 어떻게 바로 알 수 있나요?</h4>
+                    <p>간단하다. 전화했을 때 가격을 바로 안 알려주거나, "와서 보세요" 하면 90% 가짜. 또 네이버에 업소명 검색해서 후기 3개 미만이면 걸러라. 진짜는 후기 많다.</p>
+</body>
+</html>

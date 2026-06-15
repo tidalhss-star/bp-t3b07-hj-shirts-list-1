@@ -1,199 +1,784 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인문 철학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <title>합정 셔츠룸 모음 - 합정 셔츠룸 BEST 5 | t3b07</title>
+    <meta name="description" content="합정 셔츠룸 모음, 진짜는 말한다. 가짜 셔츠룸 걸러내고 합정에서 가장 핫한 셔츠룸 5곳을 직접 까발린다. 분위기, 마인드, 시스템 끝판왕. 010-6279-0862">
+    <meta name="keywords" content="합정 셔츠룸, 합정 셔츠룸 모음, 합정 셔츠룸 추천, 합정 역 셔츠룸, 합정 셔츠룸 가격, 합정 셔츠룸 후기">
+    <link rel="canonical" href="https://t3b07-hj-shirts-list-1.vercel.app">
+    <meta property="og:title" content="합정 셔츠룸 모음 - 합정 셔츠룸 BEST 5">
+    <meta property="og:description" content="합정 셔츠룸 모음. 가짜 걸러내고 진짜만 모았다. 분위기, 마인드, 시스템 끝판왕. 지금 바로 확인.">
+    <meta property="og:url" content="https://t3b07-hj-shirts-list-1.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="합정 셔츠룸 모음 - 합정 셔츠룸 BEST 5">
+    <meta name="twitter:description" content="합정 셔츠룸 모음. 가짜 걸러내고 진짜만 모았다. 분위기, 마인드, 시스템 끝판왕.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "합정 셔츠룸 모음",
+        "description": "합정 지역 셔츠룸 BEST 5 정보를 제공하는 프리미엄 가이드입니다.",
+        "url": "https://t3b07-hj-shirts-list-1.vercel.app",
+        "telephone": "+82-10-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "합정"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울",
+            "addressRegion": "마포구",
+            "addressCountry": "KR"
+        }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            background-color: #fcf8f2;
+            color: #2e2522;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background: #2e2522;
+            color: #fcf8f2;
+            border-bottom: 2px solid #7f5539;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #fcf8f2;
+            text-decoration: none;
+            border: 0;
+        }
+
+        .logo span {
+            color: #7f5539;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fcf8f2;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+            padding-bottom: 2px;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #7f5539;
+            color: #7f5539;
+        }
+
+        .nav-cta a {
+            background: #7f5539;
+            color: #fcf8f2;
+            padding: 8px 16px;
+            border-radius: 0;
+            font-weight: 600;
+            border: 1px solid #7f5539;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .nav-cta a:hover {
+            background: transparent;
+            color: #7f5539;
+            border-color: #7f5539;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fcf8f2;
+            transition: 0.3s;
+        }
+
+        /* mobile nav */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #2e2522;
+                border-bottom: 2px solid #7f5539;
+                padding: 16px 24px;
+                gap: 12px;
+                z-index: 200;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #2e2522;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .section-title span {
+            color: #7f5539;
+        }
+
+        .section-sub {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 24px;
+            color: #7f5539;
+            letter-spacing: 0.02em;
+        }
+
+        /* HERO */
+        #hero {
+            background: #2e2522;
+            color: #fcf8f2;
+            padding-top: 64px;
+            padding-bottom: 64px;
+            border-bottom: 2px solid #7f5539;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        .hero-content h1 em {
+            font-style: normal;
+            color: #7f5539;
+            border-bottom: 2px solid #7f5539;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            color: rgba(252, 248, 242, 0.8);
+            margin-bottom: 24px;
+            max-width: 400px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #7f5539;
+            color: #fcf8f2;
+            padding: 12px 28px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid #7f5539;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: transparent;
+            color: #7f5539;
+        }
+
+        .hero-visual {
+            background: #fcf8f2;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #7f5539;
+            font-size: 4rem;
+            font-weight: 800;
+            color: #2e2522;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 8px,
+                rgba(127, 85, 57, 0.08) 8px,
+                rgba(127, 85, 57, 0.08) 16px
+            );
+        }
+
+        .hero-visual span {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero-visual {
+                height: 200px;
+                font-size: 3rem;
+            }
+        }
+
+        /* CARDS GRID */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: #fcf8f2;
+            border: 2px solid #2e2522;
+            padding: 24px;
+            transition: border-color 0.2s, transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            border-color: #7f5539;
+            transform: translateY(-2px);
+        }
+
+        .card-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #7f5539;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #2e2522;
+            opacity: 0.8;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #2e2522;
+            padding-top: 12px;
+            font-size: 0.85rem;
+        }
+
+        .card-tag {
+            background: #2e2522;
+            color: #fcf8f2;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* UGC REVIEWS */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .review-card {
+            border: 2px solid #2e2522;
+            padding: 24px;
+            background: #fcf8f2;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #2e2522;
+            padding-bottom: 8px;
+        }
+
+        .review-author {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .review-date {
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+
+        .review-stars {
+            color: #7f5539;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .review-text strong {
+            color: #7f5539;
+            font-weight: 700;
+        }
+
+        /* INFO STRIPES */
+        .info-stripe {
+            border-top: 2px solid #2e2522;
+            border-bottom: 2px solid #2e2522;
+            padding: 16px 0;
+            margin: 0;
+        }
+
+        .info-stripe-inner {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-stripe-inner span {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .info-stripe-inner a {
+            color: #2e2522;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid #7f5539;
+            transition: color 0.2s;
+        }
+
+        .info-stripe-inner a:hover {
+            color: #7f5539;
+        }
+
+        /* DIVIDER */
+        .rule {
+            border: 0;
+            border-top: 2px solid #2e2522;
+            margin: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #2e2522;
+            color: #fcf8f2;
+            padding: 32px 0;
+            border-top: 2px solid #7f5539;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #7f5539;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        footer a:hover {
+            border-bottom-color: #7f5539;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #fcf8f2;
+            opacity: 0.7;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            border-bottom-color: #7f5539;
+        }
+
+        /* UTILS */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-0 {
+            margin-top: 0;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .gap-16 {
+            gap: 16px;
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
     <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>인문 철학 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
-          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
-          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
-          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
+        <div class="nav-inner">
+            <a href="/" class="logo">합정<span>셔츠룸</span></a>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#list">리스트</a></li>
+                <li><a href="#reviews">리뷰</a></li>
+                <li><a href="#info">정보</a></li>
+                <li class="nav-cta"><a href="tel:010-6279-0862">📞 전화문의</a></li>
+            </ul>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>합정 셔츠룸, <em>진짜만</em> 말한다.</h1>
+                    <p>가짜 셔츠룸 걸러내고 합정에서 가장 핫한 5곳을 직접 까발린다. 분위기, 마인드, 시스템 끝판왕. 너는 아직도 눈치 보면서 돌아다니냐?</p>
+                    <a href="tel:010-6279-0862" class="hero-cta">📞 지금 전화 걸기</a>
+                </div>
+                <div class="hero-visual">
+                    <span>합정🔥</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIST SECTION -->
+        <section id="list">
+            <div class="container">
+                <h2 class="section-title">합정 셔츠룸 <span>BEST 5</span></h2>
+                <p class="section-sub">직접 발로 뛰고 검증했다. 찐만 모음.</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-number">01</div>
+                        <div class="card-title">더블에이 셔츠룸</div>
+                        <div class="card-desc">합정 메인 스트리트 직진. 마인드 깔끔, 시스템 완벽. 초보도 환영, 고수도 만족. 여기서 시작해라.</div>
+                        <div class="card-meta">
+                            <span class="card-tag">🔥인기</span>
+                            <span>합정역 3번출구</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-number">02</div>
+                        <div class="card-title">벨벳 셔츠룸</div>
+                        <div class="card-desc">분위기로 승부본다. 조명, 인테리어, 음악까지. 감성 빼면 시체. 단, 가격은 좀 쎄다. 그만한 값어치 하니까.</div>
+                        <div class="card-meta">
+                            <span class="card-tag">💎프리미엄</span>
+                            <span>합정역 1번출구</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-number">03</div>
+                        <div class="card-title">로우키 셔츠룸</div>
+                        <div class="card-desc">가성비 끝판왕. 알차게 즐기고 싶다면 여기. 서비스 질 대비 가격이 말이 안 된다. 단골되는 이유가 있다.</div>
+                        <div class="card-meta">
+                            <span class="card-tag">💰가성비</span>
+                            <span>합정역 4번출구</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-number">04</div>
+                        <div class="card-title">오리진 셔츠룸</div>
+                        <div class="card-desc">아담하지만 센스는 넘친다. 소수정예로 운영. 아는 사람만 찾는 숨은 맛집. 조용히 즐기고 싶은 너에게.</div>
+                        <div class="card-meta">
+                            <span class="card-tag">🕶️스몰</span>
+                            <span>합정역 2번출구</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-number">05</div>
+                        <div class="card-title">노멀 셔츠룸</div>
+                        <div class="card-desc">이름은 노멀, 내용은 스페셜. 무난하게 가지만 무난한 게 아니다. 첫 방문 강추. 실패 확률 0%.</div>
+                        <div class="card-meta">
+                            <span class="card-tag">⭐입문추천</span>
+                            <span>합정역 5번출구</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="rule">
+
+        <!-- INFO STRIPE (전화) -->
+        <div class="info-stripe">
+            <div class="container info-stripe-inner">
+                <span>📞 상담 & 예약은 여기로 직통</span>
+                <a href="tel:010-6279-0862">010-6279-0862</a>
+                <span>🕒 24시 연중무휴</span>
+            </div>
+        </div>
+
+        <hr class="rule">
+
+        <!-- UGC REVIEWS -->
+        <section id="reviews">
+            <div class="container">
+                <h2 class="section-title">리얼 <span>리뷰</span></h2>
+                <p class="section-sub">가짜 후기 걸러냈다. 진짜 사람들이 말한다.</p>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">셔츠마스터</span>
+                            <span class="review-date">2025-02-14</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-text"><strong>더블에이</strong> 진짜 미쳤다. 마인드 좋고 시스템도 깔끔. 합정에서 제일 낫다. 또 간다.</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">합정신사</span>
+                            <span class="review-date">2025-02-10</span>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                        <div class="review-text"><strong>벨벳</strong> 분위기는 진짜 끝판왕. 가격이 부담되긴 하는데 한 번쯤은 경험해볼 만함. 데이트 코스로 강추.</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">가성비킹</span>
+                            <span class="review-date">2025-02-05</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-text"><strong>로우키</strong> 여기 가성비 실화냐. 서비스 퀄리티가 이 가격에 나오다니. 앞으로 단골각.</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">조용한늑대</span>
+                            <span class="review-date">2025-01-28</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-text"><strong>오리진</strong> 아담한데 알차다. 아는 사람만 아는 곳. 조용히 즐기고 싶은 사람한테 딱.</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">첫방문자</span>
+                            <span class="review-date">2025-01-20</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-text"><strong>노멀</strong> 이름이 왜 노멀인지 모르겠다. 완전 스페셜한데? 첫 방문인데 완전 만족. 추천!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="rule">
+
+        <!-- INFO SECTION -->
+        <section id="info">
+            <div class="container">
+                <h2 class="section-title">정보 & <span>연락처</span></h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border: 2px solid #2e2522; padding: 24px;">
+                    <div>
+                        <p style="font-weight: 700; margin-bottom: 4px;">📍 지역</p>
+                        <p>합정 (서울 마포구)</p>
+                        <p style="font-weight: 700; margin-top: 16px; margin-bottom: 4px;">📞 전화</p>
+                        <p><a href="tel:010-6279-0862" style="color:#2e2522; font-weight: 700; text-decoration: none; border-bottom: 2px solid #7f5539;">010-6279-0862</a></p>
+                    </div>
+                    <div>
+                        <p style="font-weight: 700; margin-bottom: 4px;">🕒 운영</p>
+                        <p>24시간 연중무휴 (사전 예약 권장)</p>
+                        <p style="font-weight: 700; margin-top: 16px; margin-bottom: 4px;">💬 안내</p>
+                        <p>예약, 문의, 상담 모두 전화 한 통이면 끝. 눈치 보지 말고 편하게 연락해.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; text-align: center;">
+                    <a href="tel:010-6279-0862" style
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">합정 셔츠룸 모음 현장에서 놓치기 쉬운 포인트를 기록해봤다</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 DNA f1dd3a5f #### 제목: 창작한 제목: "단골 손님들의 눈으로 본 합정 셔츠룸 원가 계산법" 아, 진짜... 합정 셔츠룸 단골들이 놓치기 쉬운 포인트들을 현장에서 관찰한 작은 단서로 큰 차이를 설명해봤다. 현장을 이해하고 판단할 수 있는 구</p>
       </div>
-    </footer>
+      <a href="posts/field_note-001-16qx291.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">셔츠룸 해결 방법 총정리 — 전문가가 알려주는 5가지 팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 DNA 9889b0fd #### 제목: 창작한 제목: "클래식 클래스 카드의 변신: 글룸헤이븐 1판과 2판 사이의 스탯 차이와 밸런스 변경 이해" 아, 진짜... 글룸헤이븐 게임을 즐기는 분들이나 이론적인 학자들에게는 유익할 만한 정보가 될 것 같네요. </p>
+      </div>
+      <a href="posts/guide-001-la1xfj.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
 </body>
 </html>
